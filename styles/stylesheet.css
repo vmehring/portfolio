@@ -1,9 +1,15 @@
 body {
   background-image: url("../images/background.png");
   background-color: #33334d;
+  font-family: Verdana, Geneva, sans-serif;
 }
 header {
+  display: flex;
+  background-image: url(../images/logo1blueNT.png);
+  background-repeat: no-repeat;
+  align-items: center;
   margin: 1em;
+  padding: 2em 1em 1em 8em;
 }
 main {
   display: grid;
@@ -13,35 +19,44 @@ main {
 nav {
   grid-column: 1;
   height: 100%;
+  position:fixed;
 }
 .nav {
   list-style-type: none;
   overflow: auto;
 }
 li a {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.4em;
   display: block;
-  padding: 1em 1em;
+  padding: .75em .6em;
   text-decoration: none;
 }
+.nav li a::before {
+  content: "\f06c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding-right: 8px;
+}
 h1 {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Chelsea Market', cursive;
+  font-size: 4em;
   color: #f5f5f5;
 }
 h2 {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Chelsea Market', cursive;
+  font-size: 2.5em;
   color: #f5f5f5;
 }
 h3 {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Chelsea Market', cursive;
   color: #f5f5f5;
 }
 p {
-  font-family: Verdana, Geneva, sans-serif;
   color: #b0c4de;
+  line-height: 1.5;
 }
-a {
-  font-family: Verdana, Geneva, sans-serif;
-}
+
 a:link {
   color: #87ceeb;
   text-decoration: none;
@@ -49,7 +64,7 @@ a:link {
 a:visited {
   color: #d8bfd8;
 }
-a:hover {
+a:not(.img):hover {
   color: #ffffff;
   background-color: #666699;
 }
@@ -64,28 +79,62 @@ article {
   flex-flow: row wrap;
   justify-content: flex-start;
   border-left: .25em double #b0c4de;
+  font-family: 'Architects Daughter', cursive;
 }
-.portfolio-container > div {
-  margin: 2em;
+.portfolio-container > figure {
+  padding: 2em 1em;
   justify-content: center;
 }
-.portfolio-container > div:hover {
-  background-color: #666699;
+.small {
+  width: 25%;
+  height: auto;
+}
+.med {
+  width: 40%;
+  height: auto;
+}
+.large {
+  width: 75%;
+  height:auto;
 }
 .thumbnail {
   padding: 0;
   margin: .25em;
-  border: .75em solid #33334d;
+  border: .5em solid #33334d;
   width: 200px;
   height: 200px;
 }
 .thumbnail:hover {
-  background-color: #666699;
+  box-shadow: 0 0 .5em .5em #666699;
+}
+.project-image {
+  padding: 0;
+  margin: 0;
+  border: .5em solid #33334d;
+  width: 100%;
+}
+.dual {
+  padding: 0;
+  margin: 0;
+  border: .5em solid #33334d;
+  width: 45%;
+}
+.multi {
+  padding: 0;
+  margin: 0;
+  border: .5em solid #33334d;
+  width: 30%;
+}
+.multi5 {
+  padding: 0;
+  margin: 0;
+  border: .5em solid #33334d;
+  width: 17%;
 }
 figcaption {
   padding: .25em;
-  font-family: Verdana, Geneva, sans-serif;
   color: #b0c4de;
+  font-size: 1.25em;
 }
 footer {
   display: block;
