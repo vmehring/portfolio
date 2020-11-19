@@ -39,8 +39,9 @@ nav {
 }
 .nav {
   list-style-type: none;
+  padding-left: 0;
   font-family: 'Architects Daughter', cursive;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 li a {
   display: block;
@@ -55,13 +56,13 @@ li a {
   padding-right: 8px;
 }
 h1 {
-  font-family: 'Chelsea Market', cursive;
-  font-size: 4em;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 5rem;
   color: #f5f5f5;
 }
 *.splashscreen h1 {
   font-family: 'Architects Daughter', cursive;
-  font-size: 4em;
+  font-size: 4rem;
   color: #52527a;
   margin: 0;
   padding: .5em;
@@ -90,7 +91,7 @@ h1 {
   height: auto;
   margin: 0;
   font-family: 'Architects Daughter', cursive;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   color: #d8bfd8;
 }
 *.splashscreen figure {
@@ -105,19 +106,19 @@ h1 {
   animation: getwide 2.5s .5s 1 ease-out forwards;
 }
 @keyframes getwide {
-  from {margin-left: 1.5em; margin-right: 1.5em;}
-  to {margin-left: 4em; margin-right: 4em;}
+  from {margin-left: 1.5rem; margin-right: 1.5rem;}
+  to {margin-left: 4rem; margin-right: 4rem;}
 }
 #vvmAnim {
   animation: getbig 2s .5s 1 ease-out forwards;
 }
 @keyframes getbig {
-  from {font-size: 4em; color: #52527a;}
-  to {font-size: 8em; color: #f5f5f5;}
+  from {font-size: 4rem; color: #52527a;}
+  to {font-size: 8rem; color: #f5f5f5;}
 }
 h2 {
   font-family: 'Chelsea Market', cursive;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   color: #f5f5f5;
 }
 h3 {
@@ -152,14 +153,25 @@ article {
 .portfolio-container {
   grid-column: 2;
   display: flex;
+  position: relative;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   border-left: .25em double #b0c4de;
+  margin: 0;
+  padding: 1.5em;
+  width: 100%;
+  height: auto;
   font-family: 'Architects Daughter', cursive;
 }
 .portfolio-container > figure {
-  padding: 2em 1em;
-  justify-content: center;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border: 0;
 }
 .small {
   width: 25%;
@@ -175,13 +187,16 @@ article {
 }
 .thumbnail {
   padding: 0;
+  position: absolute;
+  z-index: 2;
+  opacity: 1;
+  transition: .5s ease;
   margin: .25em;
-  border: .5em solid #33334d;
   width: 200px;
   height: 200px;
 }
 .thumbnail:hover {
-  box-shadow: 0 0 .5em .5em #666699;
+  opacity: 0;
 }
 .project-image {
   padding: 0;
@@ -208,11 +223,20 @@ article {
   width: 17%;
 }
 figcaption {
-  padding: .25em;
-  color: #b0c4de;
-  font-size: 1.25em;
+  position: absolute;
+  top: 45%;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.3rem;
+  color: #d8bfd8;
 }
 footer {
   display: block;
   margin: 2em 1em;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.3rem;
 }
