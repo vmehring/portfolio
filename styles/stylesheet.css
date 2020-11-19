@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background-image: url("../images/background.png");
   background-color: #33334d;
@@ -11,6 +14,20 @@ header {
   margin: 1em;
   padding: 2em 1em 1em 8em;
 }
+.splashscreen {
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 2em;
+  width: 100%;
+  height: auto;
+  background: none;
+  justify-content: space-around;
+  transition: justify-content 4s ease-out;
+}
+main.splashscreen:hover {
+  justify-content: space-between;
+}
 main {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -18,19 +35,21 @@ main {
 }
 nav {
   grid-column: 1;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
   height: 100%;
-  position:fixed;
 }
 .nav {
   list-style-type: none;
-  overflow: auto;
-}
-li a {
   font-family: 'Architects Daughter', cursive;
   font-size: 1.4em;
+}
+li a {
   display: block;
-  padding: .75em .6em;
+  padding: .75em .75em .75em .5em;
   text-decoration: none;
+  height: auto;
 }
 .nav li a::before {
   content: "\f06c";
@@ -41,6 +60,55 @@ li a {
 h1 {
   font-family: 'Chelsea Market', cursive;
   font-size: 4em;
+  color: #f5f5f5;
+}
+*.splashscreen h1 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 4em;
+  color: #52527a;
+  margin: 0;
+  padding: .5em;
+  border: 0;
+}
+*.splashscreen img {
+  position: absolute;
+  z-index: 2;
+  opacity: 1;
+  transition: .5s ease;
+  overflow: hidden;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+*.splashscreen img:hover {
+  opacity: 0;
+  background-color: none;
+}
+.background-text {
+  position: absolute;
+  top: 45%;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.3em;
+  color: #d8bfd8;
+}
+*.splashscreen figure {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  border: 0;
+}
+#vvmAnim {
+  transition: all 2s ease-out .5s;
+  font-size: 9em;
   color: #f5f5f5;
 }
 h2 {
@@ -67,6 +135,10 @@ a:visited {
 a:not(.img):hover {
   color: #ffffff;
   background-color: #666699;
+}
+li:nth-child(even) a:not(.img):hover {
+  color: #33334d;
+  background-color: #b0c4de;
 }
 article {
   grid-column: 2;

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="text/javascript">
+    function myTransition() {
+      document.getElementById('vvmAnim').style.transition = 'all 2s ease-out .5s'
+        this.fontSize = '9em';
+        this.color = 'white';}
+    </script>
     <link rel="stylesheet" href="styles/stylesheet.css">
     <title>V V M Design</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,47 +19,14 @@
     <meta name="keywords" content="web design, front-end web development, landscape design, garden design, gardening, Seattle">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body>
-    <header>
-      <h1>V V M Design</h1>
+  <body onload="myTransition()">
+    <header class="splashscreen">
+      <h1 id="vvmAnim">V V M</h1>
     </header>
-    <main>
-      <nav>
-        <ul class="nav">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="landscape-design.html">Landscape Design</a>
-          </li>
-          <li>
-            <a href="web-design.html">Website Design</a>
-          </li>
-        </ul>
-      </nav>
-    <article>
-      <h2>What's New</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut
-        elit dapibus, imperdiet tellus vel, porttitor nisi. Fusce scelerisque
-        metus at nisi congue finibus. Suspendisse potenti. Vivamus a feugiat
-        risus. Mauris eu tortor metus. Sed sit amet lectus id ex vestibulum
-        tristique. Integer ut massa et mi mattis imperdiet. Sed malesuada
-        sollicitudin nulla at sagittis. Phasellus sed enim mi. Donec feugiat ex
-        et orci elementum maximus. Nam nec aliquet mi. Maecenas interdum metus
-        id mauris pulvinar, auctor varius enim auctor. Donec ut tempus metus.
-        Donec eu pharetra ex. Pellentesque luctus vitae risus non finibus.</p>
-      <p>Vivamus condimentum erat erat, tristique luctus justo blandit ac.
-        Curabitur sit amet dui porttitor, congue velit eu, egestas eros.
-        Suspendisse in cursus tellus. Proin placerat ex ac nunc tincidunt, nec
-        elementum ligula fringilla. Nullam in lacus diam. Quisque hendrerit quis
-        arcu sed consequat. Ut eget pharetra orci, at volutpat lacus. Nulla
-        pharetra quis diam in hendrerit. Vestibulum at tempor sem, at tempor mi.
-        Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. </p>
-    </article>
-  </main>
-  <footer>
-    <p>Copyright 2020 Valerie V. Mehring</p>
-  </footer>
+    <main class="splashscreen">
+      <figure><a href="web-design.html"><img src="images/logo1blueNT.png" alt="Blue leaf logo"><p class="background-text">Web Design</p></a></figure>
+      <figure><a href="home.html"><img  src="images/IMG_2715.JPG" alt="Sunflowers"><p class="background-text">Home</p></a></figure>
+      <figure><a href="landscape-design.html"><img class="entry" src="images/bed_pers_small.jpg" alt="Painting"><p class="background-text">Landscape Design</p></a></figure>
+    </main>
   </body>
 </html>
