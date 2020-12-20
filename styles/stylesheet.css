@@ -150,6 +150,11 @@ article {
   padding: 0em 1.5em 0em 1.5em;
   border-left: .25em double #b0c4de;
 }
+form {
+  grid-column: 2;
+  padding: 0em 1.5em 0em 1.5em;
+  border-left: .25em double #b0c4de;
+}
 .portfolio-container {
   grid-column: 2;
   display: flex;
@@ -239,4 +244,42 @@ footer {
   margin: 2em 1em;
   font-family: 'Architects Daughter', cursive;
   font-size: 1.3rem;
+}
+label {
+  display: block;
+  color: #b0c4de;
+  margin: 1em;
+}
+fieldset {
+  border: 0;
+}
+fieldset > label {
+  margin: .5em 1em .25em 1.5em;
+  width: 200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+legend {
+  display: block;
+  color: #b0c4de;
+  margin: .5em .5em .5em 0;
+}
+input {
+  display: block;
+  margin: 1em;
+}
+input[type=radio] {
+  display: inline-flex;
+}
+input[type=text] {
+  width: 200px;
+}
+input[type=email] {
+  width: 200px;
+}
+textarea {
+  display: block;
+  margin: 1em;
 }

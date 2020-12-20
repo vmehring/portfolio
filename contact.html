@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <title>V V M Design</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d04e98713e.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="author" content="Valerie V. Mehring">
+    <meta name="description" content="my body of work in the fields of landscape design and website design">
+    <meta name="keywords" content="web design, front-end web development, landscape design, garden design, gardening, Seattle">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1>V V M Design</h1>
+    </header>
+    <main>
+      <nav>
+        <ul class="nav">
+          <li>
+            <a href="home.html">Home</a>
+          </li>
+          <li>
+            <a href="landscape-design.html">Landscape Design</a>
+          </li>
+          <li>
+            <a href="web-design.html">Website Design</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <form action="index.html" method="get" name="contact">
+        <h2>Contact</h2>
+        <label>Name
+          <input type="text" name="name" required>
+        </label>
+        <label>Email address
+          <input type="email" name="email" required>
+        </label>
+        <fieldset>
+          <legend>I am inquiring about:</legend>
+          <label>Landscape Design
+            <input type="radio" name="inquiry" value="landscape">
+          </label>
+          <label>Website Design
+            <input type="radio" name="inquiry" value="web">
+          </label>
+          <label>CAD Drafting
+            <input type="radio" name="inquiry" value="CAD">
+          </label>
+          <!--<label>Other
+            <input type="radio" name="inquiry" value="other">
+          </label>-->
+        </fieldset>
+          <label>Subject
+            <input type="text" name="subject">
+          </label>
+          <label>Message
+            <textarea name="message" rows="8" cols="80" id="message"></textarea>
+          </label>
+          <input type="submit" name="submit" value="Send Email">
+      </form>
+    </main>
+    <footer>
+      <p>Copyright 2020 Valerie V. Mehring</p>
+    </footer>
+    </body>
+  </html>
