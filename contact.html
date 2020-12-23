@@ -35,14 +35,15 @@
         </ul>
       </nav>
       <form action="index.html" method="get" name="contact">
-        <h2>Contact</h2>
+        <h2 role="presentation">Contact</h2>
+        <p>Disclaimer: this for doesn't actually work yet.</p>
         <label>Name
           <input type="text" name="name" required>
         </label>
         <label>Email address
           <input type="email" name="email" required>
         </label>
-        <fieldset>
+        <fieldset role="radiogroup">
           <legend>I am inquiring about:</legend>
           <label>Landscape Design
             <input type="radio" name="inquiry" value="landscape">
